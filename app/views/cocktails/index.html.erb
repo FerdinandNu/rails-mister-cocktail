@@ -1,9 +1,12 @@
-
-<h1>Fancy Cocktails</h1>
-<% @cocktails.each do |cocktail| %>
-  <h2><%= cocktail.name %></h2>
-  <%= link_to "Details", cocktail_path(cocktail), class: "btn btn-primary" %>
-
-<% end %>
+<div class="cards">
+  <h1>Fancy Cocktails</h1>
+  <% @cocktails.each do |cocktail| %>
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+    <h2><%= cocktail.name %></h2>
+    <%= link_to "Details", cocktail_path(cocktail), class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
 
 <%= link_to "Add a new cocktail!", new_cocktail_path, class: "btn btn-primary" %>
+
